@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Post an Announcement</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/announcement_post.js" defer></script> <!-- New JS file for posting announcements -->
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./images/DWAH-logo.png" alt="DWAH-logo" class="logo-img">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-container" alt="main-container">
+                <div class="dashboard-actions">
+                    <button class="cta-btn" onclick="window.location.href='dashboard_leader.html'">Dashboard</button>
+                    <button class="cta-btn" onclick="window.location.href='proposal_submission.html'">Submit a Proposal</button>
+                    <button class="cta-btn" onclick="window.location.href='support_request.html'">Support Request</button>
+                    <button class="cta-btn" onclick="window.location.href='announcement_post.html'">Post an Announcement</button>
+                </div>
+                <section class="announcement-section">
+                    <div class="announcement-card">
+                        <h1>Post a Community Announcement</h1>
+                        <form id="announcement-form" class="announcement-form">
+                            <input type="hidden" id="username" name="username" value="leader@example.com"> <!-- Simulated logged-in user -->
+            
+                            <label for="title">Announcement Title:</label>
+                            <input type="text" id="title" name="title" required>
+            
+                            <label for="message">Announcement Message:</label>
+                            <textarea id="message" name="message" rows="8" required></textarea>
+            
+                            <button type="submit" class="cta-btn">Post Announcement</button>
+                        </form>
+                    </div>
+                </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Dollars With A Heart | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
