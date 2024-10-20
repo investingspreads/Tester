@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Supporter Dashboard</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./images/DWAH-logo.png" alt="DWAH-logo" class="logo-img">
+                </a>
+                <div class="hamburger2" id="hamburger2">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="main-container" alt="main-container">
+        <div class="dashboard-container" id="dashboard-container">
+            <div class="dashboard-actions">
+                <button class="cta-btn" onclick="window.location.href='dashboard_supporter.html'">Dashboard</button>
+                <button class="cta-btn" onclick="window.location.href='my_stats.html'">My Stats</button>
+                <button class="cta-btn" onclick="window.location.href='gifts.html'">My Gifts</button>
+                <button class="cta-btn" onclick="window.location.href='index.html'">Log Out</button>
+            </div>
+        </div>
+        <div class="content-container2">
+            <h1>My Gifts</h1>
+            <div class="gifts-section" id="gifts-section">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Dollars With A Heart | All Rights Reserved</p>
+    </footer>
+    <script src="./js/dashboard.js"></script>
+    <script src="./js/navbar2.js"></script>
+</body>
+</html>

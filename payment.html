@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./images/DWAH-logo.png" alt="DWAH-logo" class="logo-img">
+                </a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="unique_id.html">Unique ID</a></li>
+                <li><a href="support.html">Support Our Cause</a></li>
+                <li><a href="terms.html">Terms</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="mobile-login"><a href="login.html">Log In</a></li>
+            </ul>
+        </nav>
+        <div class="login1-btn-container">
+            <a href="login.html" class="login1-btn">Log In</a>
+        </div>
+    </header>
+    <main>
+        <section class="payment-section">
+            <div class="card-p">
+                <h1>We truly appreciate your support!</h1>
+                <p>Upon a successful payment, you will be given a certificate with a unique I.D. number. <br> This will be extremly important and you must keep this safe! You will also be sent an email to create your account.</p>
+            </div>
+                <div class="modal">
+                    <form class="form">
+                      <div class="credit-card-info--form">
+                        <div class="input_container">
+                          <label for="password_field" class="input_label">Card holder full name</label>
+                          <input id="password_field" class="input_field" type="text" name="input-name" title="Inpit title" placeholder="Enter your full name">
+                        </div>
+                        <div class="input_container">
+                          <label for="password_field" class="input_label">Card Number</label>
+                          <input id="password_field" class="input_field" type="number" name="input-name" title="Inpit title" placeholder="0000 0000 0000 0000">
+                        </div>
+                        <div class="input_container">
+                            <div class="split">
+                                <div class="expiry-container">
+                                    <label for="expiry_date" class="input_label1">Expiry Date</label>
+                                    <input id="expiry_date" class="input_field" type="text" name="expiry-date" placeholder="MM/YY">
+                                </div>
+                                <div class="cvv-container">
+                                    <label for="cvv" class="input_label2">CVV</label>
+                                    <input id="cvv" class="input_field" type="number" name="cvv" placeholder="CVV">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="purchase--btn">Checkout</button>
+                    </form>
+                </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Dollars With A Heart | All Rights Reserved</p>
+    </footer>
+    <script src="js/navbar.js"></script>
+</body>
+</html>
