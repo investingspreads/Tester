@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your Website - Contact Us</title>
+    <link rel="stylesheet" href="./css/styles.css?v=1.1">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./images/DWAH-logo.png" alt="DWAH-logo" class="logo-img">
+                </a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="unique_id.html">Unique ID</a></li>
+                <li><a href="support.html">Support Our Cause</a></li>
+                <li><a href="terms.html">Terms</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="mobile-login"><a href="login.html">Log In</a></li>
+            </ul>
+        </nav>
+        <div class="login1-btn-container">
+            <a href="login.html" class="login1-btn">Log In</a>
+        </div>
+    </header>
+    <main class="contact-page">
+        <section class="contact-section">
+            <div class="contact-card">
+                <h1>Contact Us</h1>
+                <p>If you have any questions, feel free to reach out using the form below:</p>
+                <form action="submit_contact.php" method="POST" onsubmit="event.preventDefault(); alert('Form submission prevented while testing');">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+    
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+    
+                    <button type="submit" class="cta-btn-contact">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Your Website | All Rights Reserved</p>
+    </footer>
+    <script src="js/navbar.js"></script>
+</body>
+</html>

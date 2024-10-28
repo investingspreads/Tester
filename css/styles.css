@@ -1,0 +1,1862 @@
+*, *::before, *::after {
+    box-sizing: border-box; /* Include padding and borders in element's total width and height */
+}
+
+/* Global styles */
+html, body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Make body a column flexbox */
+    overflow-x: hidden;
+}
+
+/* Center content in the body of the dashboard */
+main {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: auto;
+    text-align: center; /* Center text content inside the main element */
+    flex-direction: column; /* Stack items vertically */
+    padding: 10px;
+    width: 100%;
+}
+
+.landing-intro p {
+    font-weight: bold;
+}
+
+.payment-section {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    gap: 10px; 
+}
+
+.card-p {
+    background-color: #ffffff;
+    padding: 40px;
+    max-width: auto;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.modal {
+    background-color: #ffffff;
+    padding: 40px;
+    border-bottom: 1px #000;
+    border-right: 1px #000;
+    border-radius: 20px;
+    border-style: groove;
+    max-width: 500px; /* Adjust the width based on your design preference */
+    width: 100%;
+    text-align: center;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    overflow: hidden;
+}
+
+/* Similar styles for headings */
+.modal h1 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #000000;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input_container {
+    margin-bottom: 20px; /* Space between fields */
+}
+
+.input_label {
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.input_label1 {
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.input_label2 {
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.input_field {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: inset 2px 3px 3px rgb(5, 5, 5);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.split {
+    display: flex;
+    gap: 15px; 
+    flex-wrap: wrap;
+}
+
+.expiry-container, .cvv-container {
+    flex: 1;
+    min-width: 100px; /* Prevent collapsing on small screens */
+}
+
+.split .input_field {
+    flex: 1;
+}
+
+/* Button styles similar to .cta-btn-login */
+.purchase--btn {
+    color: black;
+    padding: 10px 20px;
+    border-bottom: 1px #000;
+    border-right: 1px #000;
+    border-radius: 20px;
+    background: linear-gradient(35deg, #e4e4e4, #ffffff);
+    box-shadow: 3px 3px 10px rgba(0,0,0,1),
+    -1px -1px 6px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.purchase--btn:hover {
+    border-bottom: 1px #000;
+    border-right: 1px #000;
+    border-radius: 20px;
+    background: #e4e4e4;
+    box-shadow: 3px 3px 10px rgba(0,0,0,1),
+    -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+
+/* Header styles */
+header {
+    background-color: #e4e4e4;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px #000;
+    border-right: 1px #000;
+    border-radius: 20px;
+    border-style: groove;
+}
+
+header .logo {
+    display: flex;
+    flex: 1;
+    justify-content: left;
+    align-items: left;
+    margin-left: 40px;
+}
+
+header .logo img { 
+    height: auto; 
+    width: 250px; 
+    transition: all 0.3s ease;
+}
+
+body h1 {
+    text-align: center;
+    margin-top: 20px; 
+}
+
+.project-list h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+.project-list p {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    padding: 0 10px;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+/* Project Cards Container */
+.project-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Individual Project Card */
+.project-card {
+    background-color: #e4e4e4;
+    border-bottom: 1px #000;
+    border-right: 1px #000;
+    border-radius: 20px;
+    border-style: groove;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font: underline;
+}
+
+.project-card p {
+    line-height: 1.5;
+    word-wrap: break-word; /* Ensures text wraps within the card */
+}
+
+/* Hover Effect for Project Cards */
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.login1-btn-container {
+    margin-right: 20px;
+}
+
+.login1-btn {
+    color: black;
+    padding: 10px 20px;
+    border-bottom: 1px #000;
+    border-right: 1px #000;
+    border-radius: 20px;
+    background: linear-gradient(35deg, #e4e4e4, #ffffff);
+    box-shadow: 3px 3px 10px rgba(0,0,0,1),
+    -1px -1px 6px rgba(255, 255, 255, 0.4);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login1-btn:hover {
+    border-bottom: 1px #000;
+    border-right: 1px #000;
+    border-radius: 20px;
+    background: #e4e4e4;
+    box-shadow: 3px 3px 10px rgba(0,0,0,1),
+    -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Dashboard gets auto width, content takes remaining space */
+    height: 100vh; /* Full height of the screen */
+    align-items: flex-start;
+    gap: 20px; /* Space between the dashboard and content */
+    padding: 10px; /* Padding around the main area */
+}
+
+.dashboard-container {
+    display: flex;
+    justify-content: flex-start; /* Align container to the left */
+    align-items: flex-start;
+    width: 100%; /* Full width */
+    height: 100%;
+}
+
+.content-container1 {
+    width: auto; /* Take up the remaining space */
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 20px;
+    text-align: center;
+}
+
+.content-container2 {
+    display: flex;
+    justify-self: center;
+    flex-direction: column; /* Stack the content vertically */
+    justify-content: center; /* Center content vertically within the container */
+    align-items: center; /* Center content horizontally */
+    width: auto; /* Adjust width based on content */ /* Center horizontally relative to the parent */
+    padding: 20px; /* Optional padding for spacing */
+    text-align: center; /* Center the text inside */
+}
+
+.content-container3 {
+    display: flex;
+    justify-self: center;
+    flex-direction: column; /* Stack the content vertically */
+    justify-content: center; /* Center content vertically within the container */
+    align-items: center; /* Center content horizontally */
+    width: auto; /* Adjust width based on content */ /* Center horizontally relative to the parent */
+    padding: 20px; /* Optional padding for spacing */
+    text-align: center; /* Center the text inside */
+}
+
+.content-container4 {
+    width: auto; /* Take up the remaining space */
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 20px;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.content-container4 h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.content-container4 h2 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #000000;
+    text-decoration: underline;
+}
+
+.content-container4 h3 {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #000000;
+    text-align: center;
+}
+
+.content-container4 ul {
+    list-style-position: inside;
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.content-container4 ul li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.content-container4 p {
+    text-align: center;
+}
+
+.content-container4 h4 {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.qa-section {
+    text-align: center;
+    width: auto;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #e4e4e4; /* White background for the box */
+    border-bottom: 1px #000;
+    border-right: 1px #000;
+    border-radius: 20px;
+    border-style: groove;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.qa-section strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #000000;
+}
+
+.qa-section p {
+    margin-left: 20px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.video-container {
+    overflow: hidden;
+    background-color: #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    width: 50%;
+}
+
+.video-container2 {
+    overflow: hidden;
+    background-color: #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+/* Specific styles for leader dashboard buttons */
+.dashboard-actions {
+    background-color: #e4e4e4; /* White background for the box */
+    border-bottom: 1px #000;
+    border-right: 1px #000;
+    border-radius: 20px;
+    border-style: groove;
+    padding: 20px; /* Internal padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center align buttons inside the box */
+    width: 300px; /* Fixed width for the box */
+    gap: 35px; /* Space between buttons */
+    max-width: 100%; /* Prevent overflowing the width of the viewport */
+    overflow: hidden; /* Avoid content overflow */
+}
+
+.dashboard-actions button {
+    margin-top: 15px;
+    width: 100%; /* Buttons take full width of the box */
+    padding: 10px;
+    height: 75px;
+    font-size: 15px;
+    font-weight: bold;
+    border-bottom: 1px #000;
+    border-right: 1px #000;
+    border-radius: 20px;
+    background: linear-gradient(35deg, #e4e4e4, #ffffff);
+    box-shadow: 3px 3px 10px rgba(0,0,0,1),
+    -1px -1px 6px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-48%);
+    gap: 30px
+}
+
+.nav-links a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.certificate-counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; /* Adjust as needed */
+    width: 100%; /* Ensure it takes full width of parent */
+    box-sizing: border-box; /* Include padding in width calculations */
+}
+
+.loading {
+    display: flex; /* Use Flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+.loading svg {
+    height: 48px; /* Set a fixed height */
+    width: 64px; /* Set a fixed width */
+}
+
+.mobile-login {
+    display: none;
+}
+
+.loading svg polyline {
+    fill: none;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  
+  .loading svg polyline#back {
+    fill: none;
+  }
+  
+  .loading svg polyline#front {
+    fill: none;
+    stroke: #FF0000;
+    stroke-dasharray: 48, 144;
+    stroke-dashoffset: 192;
+    animation: dash_682 1.5s linear infinite;
+  }
+  
+  @keyframes dash_682 {
+    71.5% {
+      opacity: 0;
+    }
+  
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+.certificate-counter h2 {
+    margin-top: 10px; /* Space between the count and label */
+    color: #000000; /* Adjust color as needed */
+    font-size: 18px; /* Font size for the label */
+    text-align: center;
+}
+
+.counter-box {
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-bottom: 1px #000;
+    border-right: 1px #000;
+    border-radius: 20px;
+    border-style: groove;
+    background: linear-gradient(35deg, #e4e4e4, #ffffff);
+    box-shadow: 3px 3px 10px rgba(0,0,0,1),
+    -1px -1px 6px rgba(255, 255, 255, 0.4);
+    overflow: hidden;
+}
+
+.certificate-counter p {
+    height: auto; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px; 
+    font-weight: 600;
+    color: #000000; 
+    margin: 0; 
+}
+
+footer {
+    background-color: #e4e4e4;
+    color: #000000;
+    text-align: center;
+    padding: 20px;
+    height: auto;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.login-page main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: auto;
+}
+
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.login-card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-bottom: 1px #000;
+    border-right: 1px #000;
+    border-radius: 20px;
+    border-style: groove;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    word-wrap: break-word; /* Ensures long words will break and wrap within the card */
+    overflow-wrap: break-word; /* Modern property for breaking long words */
+    overflow: hidden; /* Prevent content from overflowing outside the card */
+}
+
+.login-card h1 {
+    margin-bottom: 20px;
+    font-size: 20px; /* Reduce the font size slightly to fit content better */
+    color: #000000;
+    word-wrap: break-word; /* Ensures text wraps within the h1 */
+    overflow-wrap: break-word;
+}
+
+.login-card p {
+    font-weight: bold;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form .field {
+    margin-bottom: 20px; /* Space between input fields */
+}
+
+.login-form label {
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.login-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: inset 2px 3px 3px rgb(5, 5, 5);
+}
+
+.login-btns {
+    display: flex; /* Keep buttons side by side */
+    justify-content: center; /* Center the buttons */
+    gap: 15px;
+}
+
+.cta-btn-login {
+    color: black;
+    padding: 10px 20px;
+    border-bottom: 1px #000;
+    border-right: 1px #000;
+    border-radius: 20px;
+    background: linear-gradient(35deg, #e4e4e4, #ffffff);
+    box-shadow: 3px 3px 10px rgba(0,0,0,1),
+    -1px -1px 6px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    width: 130px;
+}
+
+.cta-btn-login:hover {
+    border-bottom: 1px #000;
+    border-right: 1px #000;
+    border-radius: 20px;
+    background: #e4e4e4;
+    box-shadow: 3px 3px 10px rgba(0,0,0,1),
+    -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+.forgot-password-link {
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+.contact-page main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Contact card styling */
+.contact-card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-bottom: 1px #000;
+    border-right: 1px #000;
+    border-radius: 20px;
+    border-style: groove;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.contact-card h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #000000;
+}
+
+.contact-card p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #000000;
+}
+
+/* Styling the contact form */
+.contact-card form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-card label {
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* Input and textarea styling */
+.contact-card input,
+.contact-card textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: inset 2px 3px 3px rgb(5, 5, 5);
+}
+
+.contact-card textarea {
+    resize: none; /* Prevent resizing */
+}
+
+/* Button styling */
+.cta-btn-contact {
+    color: black;
+    padding: 10px 20px;
+    border-bottom: 1px #000;
+    border-right: 1px #000;
+    border-radius: 20px;
+    background: linear-gradient(35deg, #e4e4e4, #ffffff);
+    box-shadow: 3px 3px 10px rgba(0,0,0,1),
+    -1px -1px 6px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* Hover effect for the button */
+.cta-btn-contact:hover {
+    border-bottom: 1px #000;
+    border-right: 1px #000;
+    border-radius: 20px;
+    background: #e4e4e4;
+    box-shadow: 3px 3px 10px rgba(0,0,0,1),
+    -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+.support-section1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.support-card1 {
+    background-color: #ffffff;
+    padding: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+.support-card1 h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #000000;
+}
+
+.support-card1 p {
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.cta-btn-support1 {
+    color: black;
+    padding: 10px 20px;
+    border-bottom: 1px #000;
+    border-right: 1px #000;
+    border-radius: 20px;
+    background: linear-gradient(35deg, #e4e4e4, #ffffff);
+    box-shadow: 3px 3px 10px rgba(0,0,0,1),
+    -1px -1px 6px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.cta-btn-support1:hover {
+    border-bottom: 1px #000;
+    border-right: 1px #000;
+    border-radius: 20px;
+    background: #e4e4e4;
+    box-shadow: 3px 3px 10px rgba(0,0,0,1),
+    -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+.forgot-password-page main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.forgot-password-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Forgot password card styling */
+.forgot-password-card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-bottom: 1px #000;
+    border-right: 1px #000;
+    border-radius: 20px;
+    border-style: groove;
+    max-width: 350px;
+    width: 100%;
+    text-align: center;
+}
+
+.forgot-password-card h1 {
+    margin-bottom: 40px;
+    font-size: 24px;
+    color: #000000;
+}
+
+.forgot-password-card p {
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+/* Styling the forgot password form */
+.forgot-password-card form {
+    display: flex;
+    flex-direction: column;
+}
+
+.forgot-password-card label {
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* Input field styling */
+.forgot-password-card input {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: inset 2px 3px 3px rgb(5, 5, 5);
+}
+
+/* Button styling */
+.cta-btn-forgot-password {
+    color: black;
+    padding: 10px 20px;
+    border-bottom: 1px #000;
+    border-right: 1px #000;
+    border-radius: 20px;
+    background: linear-gradient(35deg, #e4e4e4, #ffffff);
+    box-shadow: 3px 3px 10px rgba(0,0,0,1),
+    -1px -1px 6px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* Hover effect for the button */
+.cta-btn-forgot-password:hover {
+    border-bottom: 1px #000;
+    border-right: 1px #000;
+    border-radius: 20px;
+    background: #e4e4e4;
+    box-shadow: 3px 3px 10px rgba(0,0,0,1),
+    -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    /* Adjust layout for tablets */
+
+    .content-container4 {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .project-card {
+        width: 90%; /* Shrink project cards */
+        margin: 10px 0;
+    }
+
+    body {
+        font-size: 14px;
+        overflow-x: hidden;
+    }
+    
+    iframe {
+        width: 100%;
+        height: auto; /* Ensure videos are responsive */
+    }
+
+    video {
+        width: 100%; /* Make video elements responsive */
+        height: auto;
+    }
+
+    .payment-section {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+    }
+
+    .card-p, .modal {
+        max-width: 90%; /* Reduce max width for tablets */
+    }
+
+    .input_field {
+        font-size: 15px; /* Slightly smaller input font for smaller devices */
+    }
+
+    .purchase--btn {
+        font-size: 15px;
+        padding: 10px 15px;
+    }
+    
+    .dashboard-container {
+        position: fixed;
+        top: 85px;
+        right: -300px; /* Initially hidden off-screen */
+        width: 300px;
+        height: auto;
+        background-color: transparent;
+        box-shadow: -2px 0 2px rgba(0, 0, 0, 0.2);
+        transition: right 0.3s ease;
+        z-index: 1000;
+        overflow-y: scroll;
+    }
+    
+    .dashboard-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    
+    .dashboard-actions button {
+        border-radius: 6px;
+        border: 2px solid #000;
+        background-color: #ffffff;
+        padding: 15px 20px;
+        margin-bottom: 10px;
+        width: 100%;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    .dashboard-open {
+        right: 0; /* Slide the dashboard into view */
+    }
+
+    .nav {
+        display: flex;
+    }
+
+    .mobile-login {
+        margin-top: auto;
+        display: block;
+    }
+
+    .nav-links {
+        display: none; /* Hide by default on mobile */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Position dropdown absolutely */
+        background-color: #ffffff; /* Set a background color */
+        border-radius: 10px; /* Round the corners */
+        border: 1px solid rgba(0, 0, 0, 0.1); /* Faint border */
+        top: 60px; /* Position below the header */
+        min-width: 60%;
+        max-width: 90%;
+        z-index: 1; /* Ensure it appears above other content */
+        padding: 10px; /* Add some padding */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    }
+
+    .login1-btn-container, .login1-btn {
+        display: none;
+    }
+
+    .nav-links li {
+        padding: 10px 0; /* Padding for links */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show the links when active */
+        text-align: center; /* Center align links */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger on mobile */
+        flex-direction: column;
+        cursor: pointer;
+        position: absolute; /* Position it absolutely */
+        top: 20px; /* Adjust this value to move it down from the top */
+        right: 30px; /* Adjust this value to move it in from the right */
+        width: 30px; /* Adjust width for a smaller size */
+        height: 25px; /* Adjust height for a smaller size */
+    }
+
+    .hamburger2 {
+        display: flex; /* Show hamburger on mobile */
+        flex-direction: column;
+        cursor: pointer;
+        position: absolute; /* Position it absolutely */
+        top: 20px; /* Adjust this value to move it down from the top */
+        right: 30px; /* Adjust this value to move it in from the right */
+        width: 30px; /* Adjust width for a smaller size */
+        height: 25px; /* Adjust height for a smaller size */
+    }
+
+    .hamburger .line {
+        width: 100%; /* Make lines fill the width of the hamburger */
+        height: 4px; /* Keep the height of the lines */
+        background-color: #000; /* Hamburger color */
+        margin: 2px 0; /* Space between lines */
+    }
+
+    .hamburger2 .line {
+        width: 100%; /* Make lines fill the width of the hamburger */
+        height: 4px; /* Keep the height of the lines */
+        background-color: #000; /* Hamburger color */
+        margin: 2px 0; /* Space between lines */
+    }
+
+    .logo img {
+        width: 100%; /* Adjust logo size for tablets */
+        justify-self: center; /* Center the logo */
+        margin-right: 5px;
+    }
+
+    .cta-btn {
+        font-size: 14px; /* Adjust button font size */
+        padding: 8px 15px; /* Adjust button padding */
+    }
+
+    .counter-box {
+        padding: 5px; /* Reduce padding for smaller screens */
+    }
+
+    .certificate-counter h2 {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    .certificate-counter p {
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .content-container4 {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .project-card {
+        width: 90%; /* Shrink project cards */
+        margin: 10px 0;
+    }
+
+    body {
+        font-size: 14px;
+        overflow-x: hidden;
+    }
+    
+    iframe {
+        width: 100%;
+        height: auto; /* Ensure videos are responsive */
+    }
+
+    video {
+        width: 100%; /* Make video elements responsive */
+        height: auto;
+    }
+
+    .payment-section {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+    }
+
+    .card-p, .modal {
+        max-width: 90%; /* Reduce max width for tablets */
+    }
+
+    .input_field {
+        font-size: 15px; /* Slightly smaller input font for smaller devices */
+    }
+
+    .purchase--btn {
+        font-size: 15px;
+        padding: 10px 15px;
+    }
+    
+    .dashboard-container {
+        position: fixed;
+        top: 85px;
+        right: -300px; /* Initially hidden off-screen */
+        width: 300px;
+        height: auto;
+        background-color: transparent;
+        box-shadow: -2px 0 2px rgba(0, 0, 0, 0.2);
+        transition: right 0.3s ease;
+        z-index: 1000;
+        overflow-y: scroll;
+    }
+    
+    .dashboard-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    
+    .dashboard-actions button {
+        border-radius: 6px;
+        border: 2px solid #000;
+        background-color: #ffffff;
+        padding: 15px 20px;
+        margin-bottom: 10px;
+        width: 100%;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    .dashboard-open {
+        right: 0; /* Slide the dashboard into view */
+    }
+
+    .nav {
+        display: flex;
+    }
+
+    .mobile-login {
+        margin-top: auto;
+        display: block;
+    }
+
+    .nav-links {
+        display: none; /* Hide by default on mobile */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Position dropdown absolutely */
+        background-color: #ffffff; /* Set a background color */
+        border-radius: 10px; /* Round the corners */
+        border: 1px solid rgba(0, 0, 0, 0.1); /* Faint border */
+        top: 60px; /* Position below the header */
+        min-width: 60%;
+        max-width: 90%;
+        z-index: 1; /* Ensure it appears above other content */
+        padding: 10px; /* Add some padding */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    }
+
+    .login1-btn-container, .login1-btn {
+        display: none;
+    }
+
+    .nav-links li {
+        padding: 10px 0; /* Padding for links */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show the links when active */
+        text-align: center; /* Center align links */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger on mobile */
+        flex-direction: column;
+        cursor: pointer;
+        position: absolute; /* Position it absolutely */
+        top: 20px; /* Adjust this value to move it down from the top */
+        right: 30px; /* Adjust this value to move it in from the right */
+        width: 30px; /* Adjust width for a smaller size */
+        height: 25px; /* Adjust height for a smaller size */
+    }
+
+    .hamburger2 {
+        display: flex; /* Show hamburger on mobile */
+        flex-direction: column;
+        cursor: pointer;
+        position: absolute; /* Position it absolutely */
+        top: 20px; /* Adjust this value to move it down from the top */
+        right: 30px; /* Adjust this value to move it in from the right */
+        width: 30px; /* Adjust width for a smaller size */
+        height: 25px; /* Adjust height for a smaller size */
+    }
+
+    .hamburger .line {
+        width: 100%; /* Make lines fill the width of the hamburger */
+        height: 4px; /* Keep the height of the lines */
+        background-color: #000; /* Hamburger color */
+        margin: 2px 0; /* Space between lines */
+    }
+
+    .hamburger2 .line {
+        width: 100%; /* Make lines fill the width of the hamburger */
+        height: 4px; /* Keep the height of the lines */
+        background-color: #000; /* Hamburger color */
+        margin: 2px 0; /* Space between lines */
+    }
+
+    .logo img {
+        width: 100%; /* Adjust logo size for tablets */
+        justify-self: center; /* Center the logo */
+        margin-right: 5px;
+    }
+
+    .cta-btn {
+        font-size: 14px; /* Adjust button font size */
+        padding: 8px 15px; /* Adjust button padding */
+    }
+
+    .counter-box {
+        padding: 5px; /* Reduce padding for smaller screens */
+    }
+
+    .certificate-counter h2 {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    .certificate-counter p {
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
+}
+@media (max-width: 480px) {
+    
+    /* Adjust layout for phones */
+
+    .content-container4 {
+        padding: 8px;
+        text-align: center;
+    }
+
+    .project-card {
+        width: 80%; /* Shrink project cards */
+        margin: 10px 0;
+    }
+
+    iframe {
+        width: 100%;
+        height: auto; /* Ensure videos are responsive */
+    }
+
+    video {
+        width: 100%; /* Make video elements responsive */
+        height: auto;
+    }
+
+    .card-p, .modal {
+        max-width: 100%; /* Full width for mobile phones */
+    }
+
+    .input_field {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .purchase--btn {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    body {
+        font-size: 14px;
+        overflow-x: hidden;
+    }
+
+    .nav {
+        display: flex;
+    }
+
+.login1-btn-container, .login1-btn {
+    display: none;
+}
+
+    .nav-links {
+        display: none; /* Hide by default on mobile */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Position dropdown absolutely */
+        background-color: #ffffff; /* Set a background color */
+        border-radius: 10px; /* Round the corners */
+        border: 2px solid #e4e4e4; /* Faint border */
+        top: 60px; /* Position below the header */
+        min-width: 60%;
+        max-width: 90%;
+        z-index: 1; /* Ensure it appears above other content */
+        padding: 10px; /* Add some padding */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    }
+
+    .nav-links li {
+        padding: 10px 0; /* Padding for links */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show when active */
+        text-align: center; /* Center align links */
+    }
+
+    .mobile-login {
+        margin-top: auto;
+        display: block;
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger on mobile */
+        flex-direction: column;
+        cursor: pointer;
+        position: absolute; /* Position it absolutely */
+        top: 20px; /* Adjust this value to move it down from the top */
+        right: 30px; /* Adjust this value to move it in from the right */
+        width: 30px; /* Adjust width for a smaller size */
+        height: 25px; /* Adjust height for a smaller size */
+    }
+
+    .hamburger2 {
+        display: flex; /* Show hamburger on mobile */
+        flex-direction: column;
+        cursor: pointer;
+        position: absolute; /* Position it absolutely */
+        top: 20px; /* Adjust this value to move it down from the top */
+        right: 30px; /* Adjust this value to move it in from the right */
+        width: 30px; /* Adjust width for a smaller size */
+        height: 25px; /* Adjust height for a smaller size */
+    }
+
+    .hamburger .line {
+        width: 100%; /* Make lines fill the width of the hamburger */
+        height: 4px; /* Keep the height of the lines */
+        background-color: #000; /* Hamburger color */
+        margin: 2px 0; /* Space between lines */
+    }
+
+    .hamburger2 .line {
+        width: 100%; /* Make lines fill the width of the hamburger */
+        height: 4px; /* Keep the height of the lines */
+        background-color: #000; /* Hamburger color */
+        margin: 2px 0; /* Space between lines */
+    }
+
+    .logo img {
+        width: 100%;
+        justify-self: center; /* Center the logo */
+        margin-right: 3px;
+    }
+
+    /* Make forms and cards more compact */
+    .contact-card, .login-card, .support-card, .announcement-card, .forgot-password-card, .proposal-card {
+        padding: 20px;
+        max-width: 100%;
+        margin: 10px;
+    }
+
+    .cta-btn {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    input, textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .dashboard-container {
+        position: fixed;
+        top: 85px;
+        right: -300px; /* Initially hidden off-screen */
+        width: 300px;
+        height: auto;
+        background-color:transparent;
+        box-shadow: -2px 0 2px rgba(0, 0, 0, 0.2);
+        transition: right 0.3s ease;
+        z-index: 1000;
+        border-radius: 10px;
+        overflow-y: scroll;
+    }
+    
+    .dashboard-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    
+    .dashboard-actions button {
+        border-radius: 6px;
+        border: 2px solid #000;
+        background-color: #ffffff;
+        padding: 15px 20px;
+        margin-bottom: 10px;
+        width: 100%;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    .dashboard-open {
+        right: 0; /* Slide the dashboard into view */
+    }
+
+    .cta-btn {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .counter-box {
+        padding: 5px; /* Reduce padding for smaller screens */
+    }
+
+    .certificate-counter h2 {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    .certificate-counter p {
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 375px) {
+    
+    /* Adjust layout for small small phones */
+
+    .content-container4 {
+        padding: 7px;
+        text-align: center;
+    }
+
+    .project-card {
+        width: 70%; /* Shrink project cards */
+        margin: 10px 0;
+    }
+
+    iframe {
+        width: 100%;
+        height: auto; /* Ensure videos are responsive */
+    }
+
+    video {
+        width: 100%; /* Make video elements responsive */
+        height: auto;
+    }
+
+    .card-p, .modal {
+        max-width: 100%; /* Full width for mobile phones */
+    }
+
+    .input_field {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .purchase--btn {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    body {
+        font-size: 14px;
+        overflow-x: hidden;
+    }
+
+    .nav {
+        display: flex;
+    }
+
+.login1-btn-container, .login1-btn {
+    display: none;
+}
+
+    .nav-links {
+        display: none; /* Hide by default on mobile */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Position dropdown absolutely */
+        background-color: #ffffff; /* Set a background color */
+        border-radius: 10px; /* Round the corners */
+        border: 2px solid #e4e4e4; /* Faint border */
+        top: 60px; /* Position below the header */
+        min-width: 60%;
+        max-width: 90%;
+        z-index: 1; /* Ensure it appears above other content */
+        padding: 10px; /* Add some padding */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    }
+
+    .nav-links li {
+        padding: 10px 0; /* Padding for links */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show when active */
+        text-align: center; /* Center align links */
+    }
+
+    .mobile-login {
+        margin-top: auto;
+        display: block;
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger on mobile */
+        flex-direction: column;
+        cursor: pointer;
+        position: absolute; /* Position it absolutely */
+        top: 20px; /* Adjust this value to move it down from the top */
+        right: 30px; /* Adjust this value to move it in from the right */
+        width: 30px; /* Adjust width for a smaller size */
+        height: 25px; /* Adjust height for a smaller size */
+    }
+
+    .hamburger2 {
+        display: flex; /* Show hamburger on mobile */
+        flex-direction: column;
+        cursor: pointer;
+        position: absolute; /* Position it absolutely */
+        top: 20px; /* Adjust this value to move it down from the top */
+        right: 30px; /* Adjust this value to move it in from the right */
+        width: 30px; /* Adjust width for a smaller size */
+        height: 25px; /* Adjust height for a smaller size */
+    }
+
+    .hamburger .line {
+        width: 100%; /* Make lines fill the width of the hamburger */
+        height: 4px; /* Keep the height of the lines */
+        background-color: #000; /* Hamburger color */
+        margin: 2px 0; /* Space between lines */
+    }
+
+    .hamburger2 .line {
+        width: 100%; /* Make lines fill the width of the hamburger */
+        height: 4px; /* Keep the height of the lines */
+        background-color: #000; /* Hamburger color */
+        margin: 2px 0; /* Space between lines */
+    }
+
+    .logo img {
+        width: 100%;
+        justify-self: center; /* Center the logo */
+        margin-right: 3px;
+    }
+
+    /* Make forms and cards more compact */
+    .contact-card, .login-card, .support-card, .announcement-card, .forgot-password-card, .proposal-card {
+        padding: 20px;
+        max-width: 100%;
+        margin: 10px;
+    }
+
+    .cta-btn {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    input, textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .dashboard-container {
+        position: fixed;
+        top: 85px;
+        right: -300px; /* Initially hidden off-screen */
+        width: 300px;
+        height: auto;
+        background-color:transparent;
+        box-shadow: -2px 0 2px rgba(0, 0, 0, 0.2);
+        transition: right 0.3s ease;
+        z-index: 1000;
+        border-radius: 10px;
+        overflow-y: scroll;
+    }
+    
+    .dashboard-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    
+    .dashboard-actions button {
+        border-radius: 6px;
+        border: 2px solid #000;
+        background-color: #ffffff;
+        padding: 15px 20px;
+        margin-bottom: 10px;
+        width: 100%;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    .dashboard-open {
+        right: 0; /* Slide the dashboard into view */
+    }
+
+    .cta-btn {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .counter-box {
+        padding: 5px; /* Reduce padding for smaller screens */
+    }
+
+    .certificate-counter h2 {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    .certificate-counter p {
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 320px) {
+    
+    /* Adjust layout for small small phones */
+
+    .content-container4 {
+        padding: 7px;
+        text-align: center;
+    }
+
+    .project-card {
+        width: 70%; /* Shrink project cards */
+        margin: 10px 0;
+    }
+
+    iframe {
+        width: 100%;
+        height: auto; /* Ensure videos are responsive */
+    }
+
+    video {
+        width: 100%; /* Make video elements responsive */
+        height: auto;
+    }
+
+    .card-p, .modal {
+        max-width: 100%; /* Full width for mobile phones */
+    }
+
+    .input_field {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .purchase--btn {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    body {
+        font-size: 14px;
+        overflow-x: hidden;
+    }
+
+    .nav {
+        display: flex;
+    }
+
+.login1-btn-container, .login1-btn {
+    display: none;
+}
+
+    .nav-links {
+        display: none; /* Hide by default on mobile */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Position dropdown absolutely */
+        background-color: #ffffff; /* Set a background color */
+        border-radius: 10px; /* Round the corners */
+        border: 2px solid #e4e4e4; /* Faint border */
+        top: 60px; /* Position below the header */
+        min-width: 60%;
+        max-width: 90%;
+        z-index: 1; /* Ensure it appears above other content */
+        padding: 10px; /* Add some padding */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    }
+
+    .nav-links li {
+        padding: 10px 0; /* Padding for links */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show when active */
+        text-align: center; /* Center align links */
+    }
+
+    .mobile-login {
+        margin-top: auto;
+        display: block;
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger on mobile */
+        flex-direction: column;
+        cursor: pointer;
+        position: absolute; /* Position it absolutely */
+        top: 20px; /* Adjust this value to move it down from the top */
+        right: 30px; /* Adjust this value to move it in from the right */
+        width: 30px; /* Adjust width for a smaller size */
+        height: 25px; /* Adjust height for a smaller size */
+    }
+
+    .hamburger2 {
+        display: flex; /* Show hamburger on mobile */
+        flex-direction: column;
+        cursor: pointer;
+        position: absolute; /* Position it absolutely */
+        top: 20px; /* Adjust this value to move it down from the top */
+        right: 30px; /* Adjust this value to move it in from the right */
+        width: 30px; /* Adjust width for a smaller size */
+        height: 25px; /* Adjust height for a smaller size */
+    }
+
+    .hamburger .line {
+        width: 100%; /* Make lines fill the width of the hamburger */
+        height: 4px; /* Keep the height of the lines */
+        background-color: #000; /* Hamburger color */
+        margin: 2px 0; /* Space between lines */
+    }
+
+    .hamburger2 .line {
+        width: 100%; /* Make lines fill the width of the hamburger */
+        height: 4px; /* Keep the height of the lines */
+        background-color: #000; /* Hamburger color */
+        margin: 2px 0; /* Space between lines */
+    }
+
+    .logo img {
+        width: 100%;
+        justify-self: center; /* Center the logo */
+        margin-right: 4px;
+    }
+
+    /* Make forms and cards more compact */
+    .contact-card, .login-card, .support-card, .announcement-card, .forgot-password-card, .proposal-card {
+        padding: 20px;
+        max-width: 100%;
+        margin: 10px;
+    }
+
+    .cta-btn {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    input, textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .dashboard-container {
+        position: fixed;
+        top: 85px;
+        right: -300px; /* Initially hidden off-screen */
+        width: 300px;
+        height: auto;
+        background-color:transparent;
+        box-shadow: -2px 0 2px rgba(0, 0, 0, 0.2);
+        transition: right 0.3s ease;
+        z-index: 1000;
+        border-radius: 10px;
+        overflow-y: scroll;
+    }
+    
+    .dashboard-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    
+    .dashboard-actions button {
+        border-radius: 6px;
+        border: 2px solid #000;
+        background-color: #ffffff;
+        padding: 15px 20px;
+        margin-bottom: 10px;
+        width: 100%;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    .dashboard-open {
+        right: 0; /* Slide the dashboard into view */
+    }
+
+    .cta-btn {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .counter-box {
+        padding: 5px; /* Reduce padding for smaller screens */
+    }
+
+    .certificate-counter h2 {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    .certificate-counter p {
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
+}
